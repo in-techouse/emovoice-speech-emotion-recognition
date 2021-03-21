@@ -1,1 +1,6 @@
-uvicorn main:app --host 0.0.0.0 --port 8001
+Steps to run the complete project
+1. Check the ip of your laptop => ipconfig
+2. Add your ip to your mobile app 
+    a. Chat.dart => line # 39
+    b. GroupChat.dart => line # 40
+3. Start the server => uvicorn main:app --host 0.0.0.0 --port 8000
