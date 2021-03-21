@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 def _get_requirements():
-    with open('requirements_mac.txt') as f:
+    with open('requirements.txt') as f:
         requirements = f.read().splitlines()
     return requirements
 
