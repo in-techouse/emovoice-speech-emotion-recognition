@@ -11,3 +11,4 @@ build/
 dist/
 speechemotionrecognition.egg-info/
 .python-version
+venv/
