@@ -3,4 +3,7 @@ Steps to run the complete project
 2. Add your ip to your mobile app 
     a. Chat.dart => line # 39
     b. GroupChat.dart => line # 40
-3. Start the server => uvicorn main:app --host 0.0.0.0 --port 8000
+3. flutter clean
+4. flutter pub get
+5. flutter pub upgrade
+6. Start the server => uvicorn main:app --host 0.0.0.0 --port 8000
