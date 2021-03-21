@@ -1,0 +1,13 @@
+.idea/
+docs/_*
+*/*.pyc
+*/__pycache__
+*/__pycache__
+speechemotionrecognition/*.ipynb*
+.vscode/
+.python-version
+.DS_Store
+build/
+dist/
+speechemotionrecognition.egg-info/
+.python-version
