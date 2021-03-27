@@ -12,3 +12,8 @@ dist/
 speechemotionrecognition.egg-info/
 .python-version
 venv/
+*.m4a
+*.mp4
+*.mp3
+*.gp3
+*.wav
