@@ -7,7 +7,7 @@ from pydub import AudioSegment
 from algorithms.common import extract_data
 from speechemotionrecognition.mlmodel import NN
 from speechemotionrecognition.utilities import get_feature_vector_from_mfcc
-
+import numpy as np
 
 def ml_example(url, sourceName):
     print("URL is: ", url)
@@ -51,8 +51,17 @@ def ml_example(url, sourceName):
     # print('prediction', model.predict_one(
     #     get_feature_vector_from_mfcc(filename, flatten=to_flatten)),
     #     'Actual 1')
-    return model.predict_one(get_feature_vector_from_mfcc(filename, flatten=to_flatten))
+    # return model.predict_one(get_feature_vector_from_mfcc(filename, flatten=to_flatten))
+    emotions = model.predict_one(get_feature_vector_from_mfcc(filename, flatten=to_flatten))
+    print("Emotions are: ", emotions)
+    finalEmotion = 0
+    for emotion in emotions:
+        finalEmotion = emotion
+    finalEmotion = finalEmotion.item()
+    print("Final Emotion is: ", finalEmotion)
+    return finalEmotion
+
 
 
 # if __name__ == "__main__":
-#     ml_example()
+#     ml_example("https://firebasestorage.googleapis.com/v0/b/emovoice.appspot.com/o/GroupChat%2F-MY-3e98dNHVeajJ3oIO%2F1618132718817.wav?alt=media&token=9958f923-78c0-4d38-868f-af3796795425", "1618132718817.wav")

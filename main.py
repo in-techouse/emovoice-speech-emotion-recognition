@@ -20,12 +20,10 @@ async def websocket_endpoint(websocket: WebSocket):
         emotion = ml_example(url, sourceName)
         print("Emotion is: ", emotion)
         print("Emotion type is: ", type(emotion))
-        print("Emotion is: ", len(emotion))
-        print("Emotion is: ", emotion.size)
-        print("Emotion is: ", emotion.shape)
         # 0 => Neutral
         # 1 => Angry
         # 2 => Happy
         # 3 => Sad
-        await websocket.send_text(messageId)
+        result = messageId + "*" + str(emotion)
+        await websocket.send_text(result)
 
