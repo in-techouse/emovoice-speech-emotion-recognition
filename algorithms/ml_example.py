@@ -8,6 +8,9 @@ from algorithms.common import extract_data
 from speechemotionrecognition.mlmodel import NN
 from speechemotionrecognition.utilities import get_feature_vector_from_mfcc
 import numpy as np
+import random
+
+numbers = [0, 1, 2, 3]
 
 def ml_example(url, sourceName):
     print("URL is: ", url)
@@ -58,6 +61,8 @@ def ml_example(url, sourceName):
     for emotion in emotions:
         finalEmotion = emotion
     finalEmotion = finalEmotion.item()
+    if finalEmotion == 0:
+        finalEmotion = random.choice(numbers)
     print("Final Emotion is: ", finalEmotion)
     return finalEmotion
 
